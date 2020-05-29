@@ -1,0 +1,24 @@
+session_config:
+  session_expiration_time: 0
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- weather
+- city
+- temp
+- goodbye
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_city:
+  - text: 'Please enter city name:'
+  utter_temp:
+  - text: Today's Temp is {temp} degree celsius.
+  utter_goodbye:
+  - text: Bye.
+actions:
+- utter_city
+- utter_temp
+- utter_greet
+- utter_goodbye
+- action_weather_api
